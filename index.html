@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZV De Zaan Heren 1 - KNZB Waterpolo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #004aad, #0077cc);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 8px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #004aad;
+      margin-top: 0;
+    }
+    .timer {
+      font-size: 2em;
+      color: #e53935;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #004aad;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #003a99;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .timer {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ZV De Zaan Heren 1</h1>
+  <p>Volg alles over het team in de KNZB Eredivisie</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Volgende Wedstrijd</h2>
+    <p><strong>Tegenstander:</strong> <span id="opponent">n.t.b.</span></p>
+    <p><strong>Datum & Tijd:</strong> 27 juli 2025 18:00</p>
+    <div class="timer" id="countdown">Laden...</div>
+  </div>
+
+  <div class="card">
+    <h2>Actuele Stand en Uitslagen</h2>
+    <p>Bekijk alle wedstrijden, uitslagen en de actuele stand van ZV De Zaan Heren 1 via de officiële KNZB-pagina.</p>
+    <a class="button" href="https://waterpolo.knzb.nl/waterpolo/teams/team/8294" target="_blank">Open KNZB Team Pagina</a>
+  </div>
+
+  <div class="card">
+    <h2>Teaminformatie</h2>
+    <ul>
+      <li><strong>Team:</strong> ZV De Zaan Heren 1</li>
+      <li><strong>Competitie:</strong> Eredivisie Heren</li>
+      <li><strong>Coach:</strong> n.t.b.</li>
+      <li><strong>Thuisbad:</strong> De Slag, Zaandam</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 ZV De Zaan. Website gemaakt voor supporters.
+</footer>
+
+<script>
+  // Countdown Timer
+  const countdown = () => {
+    const matchDate = new Date("2025-07-27T18:00:00");
+    const now = new Date();
+    const diff = matchDate - now;
+
+    const el = document.getElementById("countdown");
+
+    if (diff <= 0) {
+      el.innerText = "De wedstrijd is begonnen of afgelopen.";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    el.innerText = `${days}d ${hours}u ${minutes}m ${seconds}s`;
+  };
+
+  countdown();
+  setInterval(countdown, 1000);
+</script>
+
+</body>
+</html>
