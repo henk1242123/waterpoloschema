@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZV De Zaan Heren 1 - KNZB Waterpolo</title>
+  <title>Het Ravijn – O16 Heren</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -16,7 +13,7 @@
       color: #222;
     }
     header {
-      background: linear-gradient(90deg, #004aad, #0077cc);
+      background: linear-gradient(90deg, #0052a5, #007bff);
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -27,7 +24,6 @@
     }
     header p {
       font-size: 1.2em;
-      margin-top: 8px;
     }
     .container {
       max-width: 1000px;
@@ -42,7 +38,7 @@
       margin-bottom: 30px;
     }
     h2 {
-      color: #004aad;
+      color: #0052a5;
       margin-top: 0;
     }
     .timer {
@@ -53,7 +49,7 @@
     }
     .button {
       display: inline-block;
-      background-color: #004aad;
+      background-color: #0052a5;
       color: white;
       padding: 12px 24px;
       border-radius: 8px;
@@ -62,7 +58,7 @@
       transition: background-color 0.3s;
     }
     .button:hover {
-      background-color: #003a99;
+      background-color: #003d80;
     }
     ul {
       padding-left: 20px;
@@ -73,21 +69,13 @@
       font-size: 0.9em;
       color: #666;
     }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-      .timer {
-        font-size: 1.4em;
-      }
-    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>ZV De Zaan Heren 1</h1>
-  <p>Volg alles over het team in de KNZB Eredivisie</p>
+  <h1>Het Ravijn – O16 Heren</h1>
+  <p>Volg alle wedstrijden, uitslagen en standen</p>
 </header>
 
 <div class="container">
@@ -95,36 +83,39 @@
   <div class="card">
     <h2>Volgende Wedstrijd</h2>
     <p><strong>Tegenstander:</strong> <span id="opponent">n.t.b.</span></p>
-    <p><strong>Datum & Tijd:</strong> 27 juli 2025 18:00</p>
+    <p><strong>Datum & Tijd:</strong> 27 juli 2025 13:00</p>
     <div class="timer" id="countdown">Laden...</div>
   </div>
 
   <div class="card">
-    <h2>Actuele Stand en Uitslagen</h2>
-    <p>Bekijk alle wedstrijden, uitslagen en de actuele stand van ZV De Zaan Heren 1 via de officiële KNZB-pagina.</p>
-    <a class="button" href="https://waterpolo.knzb.nl/waterpolo/teams/team/8294" target="_blank">Open KNZB Team Pagina</a>
+    <h2>Actuele Stand & Uitslagen</h2>
+    <p>Bekijk de actuele stand en uitslagen van Het Ravijn – O16 Heren via de officiële KNZB-pagina.</p>
+    <a class="button" href="https://waterpolo.knzb.nl/waterpolo/teams/team/8294" target="_blank">
+      Bekijk op KNZB.nl
+    </a>
   </div>
 
   <div class="card">
-    <h2>Teaminformatie</h2>
+    <h2>Team Info</h2>
     <ul>
-      <li><strong>Team:</strong> ZV De Zaan Heren 1</li>
-      <li><strong>Competitie:</strong> Eredivisie Heren</li>
+      <li><strong>Team:</strong> O16 Heren</li>
+      <li><strong>Vereniging:</strong> Het Ravijn</li>
+      <li><strong>Leeftijdscategorie:</strong> Onder 16 jaar</li>
+      <li><strong>Thuisbad:</strong> Het Ravijn, Nijverdal</li>
       <li><strong>Coach:</strong> n.t.b.</li>
-      <li><strong>Thuisbad:</strong> De Slag, Zaandam</li>
     </ul>
   </div>
 
 </div>
 
 <footer>
-  &copy; 2025 ZV De Zaan. Website gemaakt voor supporters.
+  &copy; 2025 Het Ravijn – O16 Heren. Voor team, supporters & familie.
 </footer>
 
 <script>
   // Countdown Timer
   const countdown = () => {
-    const matchDate = new Date("2025-07-27T18:00:00");
+    const matchDate = new Date("2025-07-27T13:00:00"); // PAS AAN naar juiste tijd
     const now = new Date();
     const diff = matchDate - now;
 
